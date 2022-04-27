@@ -7,7 +7,7 @@
 
                                 $res = pg_query( $dbconnect,"SELECT * FROM userlogin WHERE email = '$email' AND passwords = '$ps'");
                                 $id=pg_fetch_array($res);
-                                $userLogin = pg_query($dbconnect,"SELECT max(usid) FROM userlogin WHERE email = '$email' AND passwords = '$ps'" );
+                                $userLogin = pg_query($dbconnect,"SELECT max(usid) FROM userlogin " );
                                 $idof=pg_fetch_array($userLogin);
 
                                 $userid=$idof[0];
