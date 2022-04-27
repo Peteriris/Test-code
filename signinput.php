@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+ 
+
     $dbconnect = pg_connect("host=localhost dbname=textcode user=postgres password=1234");
 
     if($_POST)
@@ -15,7 +18,7 @@
         $useId=$result[0];
 
         $_SESSION['userid']=$useId;
-        
+
         if($res4)
         {
             header('location:welcome.php');

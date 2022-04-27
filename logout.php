@@ -2,6 +2,7 @@
 session_start();
 if(isset($_SESSION['userid']))
  {
+    session_destroy();
      unset($_SESSION['userid']);
  }
 session_destroy();

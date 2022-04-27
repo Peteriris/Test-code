@@ -17,15 +17,20 @@ session_start();
         <header >
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <b class="navbar-brand">CODETEXT</b>
+                    <b class="navbar-brand fs-3">CODETEXT</b>
                   <form class="d-flex">
-                    <a href="index.php" class="" >Login</a>
-                    <a href="signup.php" class="" >/Signup</a>
-                    <?php
+                      <?php
 						if(isset($_SESSION['userid']))
 						{
 						?>
                     <a href="logout.php" class="" >Logout</a>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <a href="index.php" class="" >Login</a>
+                    <a href="signup.php" class="" >/Signup</a>
                     <?php
                     }
                     ?>
