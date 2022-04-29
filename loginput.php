@@ -11,7 +11,7 @@ session_start();
 
                                 $res = pg_query( $dbconnect,"SELECT * FROM userlogin WHERE email = '$email' AND passwords = '$ps'");
 
-                                if($res==0)
+                                if (pg_num_rows($res) > 0)
                                 {
                                 $id=pg_fetch_array($res);
 
