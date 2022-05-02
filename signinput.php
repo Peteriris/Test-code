@@ -1,7 +1,6 @@
 <?php
 
 session_start();
- 
 
     $dbconnect = pg_connect("host=localhost dbname=textcode user=postgres password=1234");
 
@@ -13,7 +12,7 @@ session_start();
 
         $res4= pg_query($dbconnect,"INSERT INTO userlogin(username,passwords,email)VALUES('$UserName','$password','$Email')");
 
-        $resid=pg_query($connect,"select max(id) from userlogin");
+        $resid = pg_query( $dbconnect,"SELECT max(usid) FROM userlogin");
         $result=pg_fetch_array($resid);
         $useId=$result[0];
 
