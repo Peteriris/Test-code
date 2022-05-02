@@ -15,7 +15,7 @@ session_start();
     </head>
     <body >
         <header >
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-light border bg-light">
                 <div class="container-fluid">
                     <b class="navbar-brand fs-3">CODETEXT</b>
                   <form class="d-flex">
